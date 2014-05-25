@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe PostsController, :type => :controller do
+  login_user
 
   let(:valid_attributes) { { "title" => "MyString", "body" => "MyText" } }
   let(:valid_session) { {} }
