@@ -16,6 +16,7 @@ gem 'devise'
 gem 'redactor-rails'
 gem "carrierwave"
 gem "mini_magick"
+gem "font-awesome-rails"
 
 gem 'spring',        group: :development
 
