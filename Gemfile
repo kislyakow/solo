@@ -11,6 +11,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+gem 'bootstrap-sass', '~> 3.1.1'
+
 gem 'spring',        group: :development
 
 group :development, :test do
