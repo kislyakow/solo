@@ -17,7 +17,7 @@
   </div>
   <div class="field form-group">
     <%= f.label :body %><br>
-    <%= text_area_tag :body, "", :class => "redactor form-control", :rows => 40, :cols => 120 %>
+    <%= f.text_area :body, :class => "redactor form-control", :rows => 40, :cols => 120 %>
   </div>
   <div class="actions">
     <%= f.submit class: "btn btn-large btn-primary" %>
