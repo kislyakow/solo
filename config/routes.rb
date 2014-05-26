@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  #get 'blog/index'
+  get 'blog/index'
 
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users
