@@ -7,12 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container-fluid">
+	<nav class="navbar navbar-default navbar-static-top " role="navigation">
+  	<div class="container">
+    	<a class="navbar-brand fa fa-user fa-3x" href="http://localhost:3000"> SOLO</a>
+  	</div>
+	</nav>
+
+	<div class="container">
+
 
 		<p class="notice"><%= notice %></p>
 		<p class="alert"><%= alert %></p>
 
 		<%= yield %>
+
 
 	</div>
 </body>
