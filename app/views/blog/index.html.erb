@@ -1,4 +1,6 @@
 <% @posts.each do |post| %>
 	<h1><%= link_to post.title, post %></h1>
-	<h3><%= raw post.body.truncate(20) %></h3>
+	<p class="article_pub-date"><%= post.created_at.strftime("%b %d, %Y") %></p>
+
+	<p><%= raw post.body.truncate(200) %></p>
 <% end %>
