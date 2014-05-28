@@ -133,4 +133,7 @@ describe PostsController, :type => :controller do
     end
   end
 
+  it { should permit(:title, :body).for(:create) }
+  it { should use_before_filter(:authenticate_user!) }
+
 end
