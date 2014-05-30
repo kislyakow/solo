@@ -46,6 +46,7 @@ describe "Posts" do
 
     fill_in "Title", :with => "TitleText"
     fill_in "Body", :with => "BodyText"
+    check 'Published'
     click_button "Create Post"
 
     expect(page).to have_content('TitleText')
@@ -68,7 +69,33 @@ describe "Posts" do
 		expect(page).to have_content('Editing post')
 
 		fill_in 'Title', :with => 'New TitleText'
+		check 'Published'
 		click_button 'Update Post'
 		expect(page).to have_content('New TitleText')
+	end
+
+	it "publishing post" do
+		user = FactoryGirl.create(:user)
+		user.save
+
+		visit root_path
+
+		expect(page).to_not have_content('TitleText')
+
+		visit "/posts"
+
+		fill_in "Email", :with => "test@test.com"
+    fill_in "Password", :with => "Testing123"
+    click_button "Sign in"
+
+		@post = Post.create(:title => 'TitleText', :body => 'BodyText')
+
+		visit edit_post_path(@post)
+		check 'Published'
+		click_button 'Update Post'
+
+		visit root_path
+
+		expect(page).to have_content('TitleText')
 	end
 end

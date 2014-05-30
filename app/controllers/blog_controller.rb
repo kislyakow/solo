@@ -1,6 +1,6 @@
 class BlogController < ApplicationController
   def index
-  	@posts = Post.all
+  	@posts = Post.where(published: true)
 
   	respond_to do |format|
   		format.html
