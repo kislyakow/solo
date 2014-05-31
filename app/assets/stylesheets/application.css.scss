@@ -7,37 +7,6 @@ body {
 	font-size: 16px;
 }
 
-a:hover {
-	text-decoration: none;
-}
-.navbar-default {
-	background-color: #384452;
-	border-color: #384452;
-}
-.navbar-default .navbar-brand {
-	color: #FFFFFF;
-}
-.navbar-default .navbar-brand:hover {
-	color: #777;
-}
-
-.navbar-default .navbar-nav > li > a {
-	color: #FFFFFF;
-}
-.navbar-default .navbar-nav > li > a:hover {
-	color: #00b3fe;
-}
-
-h1, .h1 {
-	font-size: 3.5em;
-}
-
-
-
-.article_pub-date {
-	color: #949494;
-}
-
 a {
 	padding: 0;
 	margin: 0;
@@ -47,4 +16,63 @@ a {
 	-o-transition: background-color .4s linear, color .4s linear;
 	-ms-transition: background-color .4s linear, color .4s linear;
 	transition: background-color .4s linear, color .4s linear;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.article_pub-date {
+	color: #949494;
+}
+
+.checkbox input[type="checkbox"] {
+	margin-left: 0px;
+}
+
+.checkbox label {
+	padding-left: 5px;
+}
+
+.form-group {
+	margin-top:10px;
+}
+
+h1, .h1 {
+	font-size: 3.5em;
+}
+
+.input-group {
+	margin-bottom: 25px;
+}
+
+#loginbox {
+	margin-top:50px;
+}
+
+.navbar-default {
+	background-color: #384452;
+	border-color: #384452;
+}
+
+.navbar-default .navbar-brand {
+	color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #777;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: #00b3fe;
+}
+
+
+
+.panel-body {
+	padding-top:30px;
 }
