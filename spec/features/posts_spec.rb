@@ -10,8 +10,8 @@ describe "Posts" do
 	it "display Invalid email or password when incorrect login" do
 		visit "/posts"
 
-		fill_in "Email", :with => "incorect@incorect.com"
-    fill_in "Password", :with => "incorect"
+		fill_in "login-username", :with => "incorect@incorect.com"
+    fill_in "login-password", :with => "incorect"
     click_button "Sign in"
 
     expect(page).to have_content('Invalid')
@@ -23,8 +23,8 @@ describe "Posts" do
 
 		visit "/posts"
 
-		fill_in "Email", :with => "test@test.com"
-    fill_in "Password", :with => "Testing123"
+		fill_in "login-username", :with => "test@test.com"
+    fill_in "login-password", :with => "Testing123"
     click_button "Sign in"
 
     expect(page).to have_content('Signed in successfully')
@@ -36,8 +36,8 @@ describe "Posts" do
 
 		visit "/posts"
 
-		fill_in "Email", :with => "test@test.com"
-    fill_in "Password", :with => "Testing123"
+		fill_in "login-username", :with => "test@test.com"
+    fill_in "login-password", :with => "Testing123"
     click_button "Sign in"
 
     find("#posts_index").click
@@ -58,8 +58,8 @@ describe "Posts" do
 
 		visit "/posts"
 
-		fill_in "Email", :with => "test@test.com"
-    fill_in "Password", :with => "Testing123"
+		fill_in "login-username", :with => "test@test.com"
+    fill_in "login-password", :with => "Testing123"
     click_button "Sign in"
 
 		@post = Post.create(:title => 'TitleText', :body => 'BodyText')
@@ -84,8 +84,8 @@ describe "Posts" do
 
 		visit "/posts"
 
-		fill_in "Email", :with => "test@test.com"
-    fill_in "Password", :with => "Testing123"
+		fill_in "login-username", :with => "test@test.com"
+    fill_in "login-password", :with => "Testing123"
     click_button "Sign in"
 
 		@post = Post.create(:title => 'TitleText', :body => 'BodyText')
