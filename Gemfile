@@ -32,3 +32,7 @@ group :development do
   gem "better_errors"
   gem 'spring'
 end
+
+gem 'rails_12factor',	group: :production
+
+ruby "2.1.2"
