@@ -51,9 +51,9 @@ describe PostsController, :type => :controller do
         expect(assigns(:post)).to be_persisted
       end
 
-      it "redirects to the created post" do
+      it "redirects to the posts path" do
         post :create, {:post => valid_attributes}, valid_session
-        expect(response).to redirect_to(Post.last)
+        expect(response).to redirect_to posts_url
       end
     end
 
@@ -92,10 +92,10 @@ describe PostsController, :type => :controller do
         expect(assigns(:post)).to eq(post)
       end
 
-      it "redirects to the post" do
+      it "redirects to the posts path" do
         post = Post.create! valid_attributes
         put :update, {:id => post.to_param, :post => valid_attributes}, valid_session
-        expect(response).to redirect_to(post)
+        expect(response).to redirect_to posts_url
       end
     end
 
