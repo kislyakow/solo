@@ -14,6 +14,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'devise'
 gem "font-awesome-rails"
+gem 'ckeditor'
+gem 'paperclip'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
