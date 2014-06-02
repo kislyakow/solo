@@ -15,7 +15,6 @@ Bundler.require(*Rails.groups)
 
 module Solo
   class Application < Rails::Application
-    config.assets.precompile += ['redactor-rails/*', 'application.css.scss', 'scaffolds.css.scss']
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
