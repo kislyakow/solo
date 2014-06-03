@@ -2,10 +2,9 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic-ext);
 @import "font-awesome";
 
-body {
-	font-size: 16px;
-}
+body { font-size: 16px; }
 
+/*----Links----*/
 a {
 	padding: 0;
 	margin: 0;
@@ -16,70 +15,40 @@ a {
 	-ms-transition: background-color .4s linear, color .4s linear;
 	transition: background-color .4s linear, color .4s linear;
 }
+a:hover {	text-decoration: none; }
 
-a:hover {
-	text-decoration: none;
-}
+/*----Typography----*/
+.article_pub-date {	color: #949494; }
+h1, .h1 { font-size: 3.5em; }
 
-.article_pub-date {
-	color: #949494;
-}
+/*----Forms----*/
+.checkbox input[type="checkbox"] { margin-left: 0px; }
+.checkbox label {	padding-left: 5px; }
+.form-group {	margin-top:10px; }
+.input-group { margin-bottom: 25px; }
 
-.checkbox input[type="checkbox"] {
-	margin-left: 0px;
-}
+/*----Login Form----*/
+#loginbox {	margin-top:50px; }
+.panel-body {	padding-top:30px; }
 
-.checkbox label {
-	padding-left: 5px;
-}
-
-.form-group {
-	margin-top:10px;
-}
-
-h1, .h1 {
-	font-size: 3.5em;
-}
-
-.input-group {
-	margin-bottom: 25px;
-}
-
-#loginbox {
-	margin-top:50px;
-}
-
+/*----Header----*/
 .navbar-default {
 	background-color: #384452;
 	border-color: #384452;
 }
+.navbar-default .navbar-brand {	color: #FFFFFF; }
+.navbar-default .navbar-brand:hover {	color: #777; }
+.navbar-default .navbar-nav > li > a { color: #FFFFFF; }
+.navbar-default .navbar-nav > li > a:hover { color: #00b3fe; }
 
-.navbar-default .navbar-brand {
-	color: #FFFFFF;
-}
-
-.navbar-default .navbar-brand:hover {
-	color: #777;
-}
-
-.navbar-default .navbar-nav > li > a {
-	color: #FFFFFF;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-	color: #00b3fe;
-}
-
-
-
-.panel-body {
-	padding-top:30px;
-}
-
-
+/*----Comments----*/
 .widget .panel-body { padding:0px; }
 .widget .list-group { margin-bottom: 0; }
 .widget .panel-title { display:inline }
 .widget .label-info { float: right; }
-.widget li.list-group-item {border-radius: 0;border: 0;border-top: 1px solid #ddd;}
 .widget .comment-text { font-size: 14px; }
+.widget li.list-group-item {
+	border-radius: 0;
+	border: 0;
+	border-top: 1px solid #ddd;
+}
