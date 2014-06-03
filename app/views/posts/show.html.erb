@@ -1,3 +1,4 @@
+<%= render 'shared/alert_messages' %>
 <h1><%= @post.title %></h1>
 
 <p class="article_pub-date"><%= @post.created_at.strftime("%b %d, %Y") %></p>
@@ -12,18 +13,9 @@
 <div class="container">
 	<div class="row">
 		<h3>Send Comment</h3>
-
-
-
-
 		<div class="col-md-5">
 			<%= form_for([@post, Comment.new], html: { class: "form-horizontal" } ) do |f| %>
-
-
-
-
-
-
+			<%= render 'shared/alert_messages' %>
 
 				<div class="form-group">
 					<div class="input-group">
