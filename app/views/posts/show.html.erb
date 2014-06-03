@@ -11,8 +11,19 @@
 
 <div class="container">
 	<div class="row">
+		<h3>Send Comment</h3>
+
+
+
+
 		<div class="col-md-5">
 			<%= form_for([@post, Comment.new], html: { class: "form-horizontal" } ) do |f| %>
+
+
+
+
+
+
 
 				<div class="form-group">
 					<div class="input-group">
@@ -22,7 +33,7 @@
 
 					<div class="input-group">
 						<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-						<%= f.text_field :email, placeholder: 'Email (*required, not publish)', class: "form-control" %>
+						<%= f.text_field :email, placeholder: 'Email (*required, not be published)', class: "form-control" %>
 					</div>
 
 					<div class="input-group">

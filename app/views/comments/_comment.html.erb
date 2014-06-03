@@ -1,6 +1,8 @@
 <%= div_for comment do %>
  	<p>
 		<strong>Posted <%= time_ago_in_words(comment.created_at) %> ago</strong><br/>
+		<%= image_tag avatar_url(comment) %>
+		<h4>Commentator: <%= comment.name %></h4>	
 		<%= comment.body %>
   </p>
 <% end %>
