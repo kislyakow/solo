@@ -5,7 +5,7 @@
 
 <p><%= raw @post.body %></p>
 
-<h2>Comments</h2>
+<h3>Comments <span class="label label-info"><%= @post.comments.count %></span></h3>
 <div id="comments">
 	<%= render partial: @post.comments %>
 </div>

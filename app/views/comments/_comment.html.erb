@@ -1,8 +1,23 @@
 <%= div_for comment do %>
- 	<p>
-		<strong>Posted <%= time_ago_in_words(comment.created_at) %> ago</strong><br/>
-		<%= image_tag avatar_url(comment) %>
-		<h4>Commentator: <%= comment.name %></h4>	
-		<%= comment.body %>
-  </p>
+	<div class="container">
+		<div class="row">
+			<div class="panel panel-default widget">
+				<div class="panel-heading">
+					<span class="fa fa-comments"></span>
+					<h3 class="panel-title"><%= comment.name %></h3>
+					<span class="label label-info"><%= time_ago_in_words(comment.created_at) %> ago</span>
+				</div>
+				<div class="panel-body">
+					<ul class="list-group">
+						<li class="list-group-item">
+							<div class="row">
+								<div class="col-xs-2 col-md-1"><%= image_tag avatar_url(comment), class: "img-circle img-responsive" %></div>
+								<div class="comment-text"><%= comment.body %></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 <% end %>
