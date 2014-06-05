@@ -98,4 +98,5 @@ describe "Posts" do
 
 		expect(page).to have_content('TitleText')
 	end
+
 end
