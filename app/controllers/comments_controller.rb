@@ -12,11 +12,13 @@ class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
-    if @comment.save
-      redirect_to @comment.post
-    else
-      flash[:alert] = "Comment not created. All fields must be filled"
-      redirect_to @comment.post
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to @comment.post }
+        format.js      
+      else
+        format.html { redirect_to @comment.post, alert: "Comment not created. All fields must be filled"}      
+      end
     end
   end
 
